@@ -1,6 +1,6 @@
 import { getHouses } from "@/api/getHouses";
 import { getPage } from "@/api/getPage";
-import { iHouse } from "@/interfaces/iHouse";
+import { iHouse } from "@/interfaces/House.interface";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 

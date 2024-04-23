@@ -1,0 +1,25 @@
+.keyFeatures {
+  background: var(--beige-color);
+  padding: 40px 60px 80px;
+
+  &__item {
+    display: flex;
+    align-items: flex-end;
+    height: 202px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 30px;
+  }
+
+  &__title {
+    width: 60%;
+
+    h2 {
+      max-width: 300px;
+    }
+  }
+
+  &__description {
+    width: 40%;
+    max-width: 420px;
+  }
+}

@@ -1,0 +1,160 @@
+.heroSection {
+  padding: 10px;
+  // transform: scale(1.1);
+  // transition: all 0.7s;
+
+  // &_shown {
+  //   transform: scale(1);
+  // }
+
+  &__cnt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 20px);
+    max-height: 800px;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    position: relative;
+  }
+
+  &__logo {
+    transition: all 1s 1.5s;
+    // transform: translateY(-100%);
+    opacity: 0;
+
+    &_shown {
+      // transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    opacity: 0;
+    transition: all 2s;
+
+    &_shown {
+      opacity: 1;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    padding: 0 50px;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 40px;
+    opacity: 0;
+    transition: all 1s 1.5s;
+    margin-top: 50px;
+
+    &_shown {
+      opacity: 1;
+    }
+  }
+
+  &__actionItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    background-color: #fff;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 20px;
+    transition: all 0.2s;
+    padding: 0 16px;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+
+    &_square {
+      width: 44px;
+      padding: 0;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    padding: 0 50px 50px;
+  }
+
+  &__underlineBlock {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-top: 2px solid white;
+    opacity: 0;
+    transition: all 1.5s 1.5s;
+    padding-top: 40px;
+
+    &_shown {
+      opacity: 1;
+    }
+  }
+
+  &__description {
+    width: 100%;
+    max-width: 420px;
+    font-size: 20px;
+    line-height: 1.5;
+    color: white;
+  }
+
+  &__bottomRight {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+  }
+}
+
+.tagline {
+  display: flex;
+  flex-direction: column;
+  font-size: 60px;
+  color: white;
+  text-transform: uppercase;
+  padding-bottom: 40px;
+
+  &__lineCnt {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 70px;
+  }
+
+  &__line {
+    display: block;
+    transform: translateY(100%);
+    transition: all 1.5s 2s;
+  }
+
+  &.show &__line {
+    transform: translateY(0);
+  }
+}
+
+.cta {
+  width: 300px;
+}

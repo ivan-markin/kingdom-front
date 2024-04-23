@@ -1,0 +1,13 @@
+.included {
+  padding: 0 60px;
+  margin-bottom: 105px;
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__items {
+    display: flex;
+    gap: 20px;
+  }
+}

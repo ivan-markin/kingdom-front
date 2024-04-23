@@ -1,0 +1,88 @@
+.form {
+  padding: 0 10px;
+  margin-bottom: 105px;
+
+  &__cnt {
+    border-radius: var(--border-radius);
+    background: var(--dark-gray-color);
+    padding: 40px 40px 36px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 110px;
+  }
+
+  &__title {
+    color: white;
+    width: max-content;
+  }
+
+  &__description {
+    color: white;
+    max-width: 412px;
+  }
+
+  &__content {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  &__inputs {
+    display: flex;
+    gap: 20px;
+    flex: auto;
+  }
+
+  &__input {
+    flex: auto;
+    background: var(--input-color);
+    border-radius: var(--border-radius);
+    border: none;
+    color: white;
+    font-size: 20px;
+    outline: none;
+    transition: all 0.2s;
+    padding: 0 30px;
+
+    &::placeholder {
+      color: white;
+    }
+
+    &:hover {
+      background: var(--input-hover-color);
+    }
+
+    &:focus {
+      background: white;
+      color: black;
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    font-size: 20px;
+
+    a {
+      text-decoration: underline #676869 1px;
+      text-underline-offset: 7px;
+      transition: all 0.1s;
+
+      &:hover {
+        color: var(--primary-color);
+        text-decoration-color: var(--primary-color);
+      }
+    }
+  }
+
+  &__button {
+    width: 315px;
+  }
+}

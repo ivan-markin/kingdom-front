@@ -1,0 +1,28 @@
+.gallery {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    margin-bottom: 40px;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.gallerySlider {
+  width: 100%;
+}
+
+.slide {
+  width: fit-content;
+  height: fit-content;
+  overflow: hidden;
+  border-radius: 6px;
+  font-size: 0;
+  padding: 0;
+}

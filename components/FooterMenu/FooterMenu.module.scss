@@ -1,0 +1,9 @@
+.footerMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__item {
+    list-style: none;
+  }
+}

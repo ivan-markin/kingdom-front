@@ -1,0 +1,21 @@
+.slider {
+  width: 100%;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background: white;
+}
+
+.sliderCnt {
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
+}
+
+.sliderControls {
+  display: flex;
+  gap: 10px;
+}

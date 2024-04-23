@@ -1,0 +1,27 @@
+.aboutParams {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 108px 40px;
+
+  &__content {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 194px;
+    width: 28.4vw;
+    border-left: 2px solid var(--primary-color);
+    padding-left: 20px;
+  }
+
+  &__itemValue {
+    font-size: 80px;
+    color: var(--primary-color);
+  }
+}

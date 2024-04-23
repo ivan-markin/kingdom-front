@@ -1,0 +1,13 @@
+.stages {
+  background: var(--beige-color);
+  padding: 60px 60px 128px;
+
+  &__title {
+    margin-bottom: 100px;
+  }
+
+  &__slider {
+    width: 880px;
+    margin: 0 auto;
+  }
+}

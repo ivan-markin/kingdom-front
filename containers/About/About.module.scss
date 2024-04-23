@@ -1,0 +1,27 @@
+.about {
+  display: flex;
+  align-items: flex-start;
+  gap: 76px;
+  min-height: 628px;
+  background: url("../../public/about-bg.png") repeat-x
+    center;
+  padding: 126px 14.3vw 0 10.7vw;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    width: 192px;
+    height: 306px;
+    background: white;
+  }
+
+  &__slider {
+    flex: auto;
+    height: 382px;
+    background: white;
+    overflow: hidden;
+    padding: 40px;
+  }
+}

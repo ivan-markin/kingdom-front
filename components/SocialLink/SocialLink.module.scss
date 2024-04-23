@@ -1,0 +1,12 @@
+.socialLink {
+  display: flex;
+  align-items: center;
+
+  svg path {
+    transition: all 0.2s;
+  }
+
+  &:hover svg path {
+    fill: var(--primary-color);
+  }
+}

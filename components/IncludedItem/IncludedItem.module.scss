@@ -1,0 +1,10 @@
+.includedItem {
+  display: flex;
+  flex-direction: column;
+  gap: 62px;
+  flex: 1;
+
+  &__description {
+    max-width: 320px;
+  }
+}

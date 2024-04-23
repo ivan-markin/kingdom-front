@@ -15,8 +15,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={geologica.className}>{children}</body>
+    <html lang="ru">
+      <body className={geologica.className}>
+        {children}
+      </body>
     </html>
   );
 }
