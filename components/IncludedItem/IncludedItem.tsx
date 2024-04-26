@@ -11,7 +11,7 @@ export default function IncludedItem({
       <Image
         className={style.includedItem__image}
         src={
-          "http://localhost:1337" +
+          "http://95.163.228.113" +
           item.attributes.icon.data.attributes.url
         }
         height={105}

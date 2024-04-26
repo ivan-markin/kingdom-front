@@ -42,7 +42,7 @@ export default function StagesSlider({
               <div className={style.slide__icon}>
                 <Image
                   src={
-                    "http://localhost:1337" +
+                    "http://95.163.228.113" +
                     item.attributes.icon.data.attributes.url
                   }
                   width={225}

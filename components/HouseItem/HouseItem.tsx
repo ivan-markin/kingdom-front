@@ -61,7 +61,7 @@ export default function HouseItem({ item }: HouseItemProps) {
       <div className={cn(style.house__imageCnt, "image-cnt")}>
         <Image
           src={
-            "http://localhost:1337" + item.attributes.cover.data.attributes.url
+            "http://95.163.228.113" + item.attributes.cover.data.attributes.url
           }
           className={style.house__image}
           width={466}
