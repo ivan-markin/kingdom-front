@@ -9,6 +9,7 @@ import "swiper/css/effect-cards";
 import { useRef, useState } from "react";
 import Image from "next/image";
 import SliderButton from "../SliderButton/SliderButton";
+import cn from 'classnames';
 
 export default function StagesSlider({
   items,
@@ -21,15 +22,15 @@ export default function StagesSlider({
     <div className={style.stagesSlider}>
       <Swiper
         className={style.slider}
-        modules={[EffectCards]}
-        effect={"cards"}
+        modules={[EffectCards]}   
+        effect="cards"
         onSwiper={(swiper) => {
           stagesRef.current = swiper;
         }}
         onSlideChange={() =>
           setCurrentSlide(stagesRef.current.activeIndex)
         }
-        spaceBetween={10}
+        spaceBetween={10}      
         ref={stagesRef}
       >
         {items &&
@@ -46,11 +47,12 @@ export default function StagesSlider({
                   }
                   width={225}
                   height={217}
+                  quality={100}
                   alt=""
                 />
               </div>
               <div className={style.slide__content}>
-                <h2 className={"block-title"}>
+                <h2 className={cn("block-title", style.slide__title)}>
                   {item.attributes.title}
                 </h2>
                 <span className={"regular-text"}>

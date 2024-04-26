@@ -1,1 +1,3 @@
-export interface AboutProps {}
+export interface AboutProps {
+  id?: string;
+}

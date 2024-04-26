@@ -9,10 +9,12 @@ const marqueeImage = "/crown-icon.svg";
 
 const marqueeContent = [
   {
+    id: 0,
     text: marqueeText,
     image: marqueeImage,
   },
   {
+    id: 1,
     text: marqueeText,
     image: marqueeImage,
   },
@@ -26,7 +28,7 @@ export default async function ExhibitionArea({}: ExhibitionAreaProps) {
       <div className={style.exhibitionArea__marqueeCnt}>
         <div className={style.exhibitionArea__marquee}>
           {marqueeContent.map((item) => (
-            <div className={style.exhibitionArea__marqueeItem}>
+            <div className={style.exhibitionArea__marqueeItem} key={item.id}>
               <h2 className={"block-title"}>{item.text}</h2>
               <Image src={item.image} width={68} height={22} alt="" />
             </div>
@@ -34,7 +36,7 @@ export default async function ExhibitionArea({}: ExhibitionAreaProps) {
         </div>
         <div aria-hidden={true} className={style.exhibitionArea__marquee}>
           {marqueeContent.map((item) => (
-            <div className={style.exhibitionArea__marqueeItem}>
+            <div className={style.exhibitionArea__marqueeItem} key={item.id}>
               <h2 className={"block-title"}>{item.text}</h2>
               <Image src={item.image} width={68} height={22} alt="" />
             </div>

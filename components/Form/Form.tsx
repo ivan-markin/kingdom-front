@@ -10,12 +10,12 @@ import { Geologica } from "next/font/google";
 
 const geologica = Geologica({ subsets: ["cyrillic"] });
 
-export default function Form({}: FormProps) {
+export default function Form({id}: FormProps) {
   const [isCheckboxActive, setCheckboxActive] =
     useState<boolean>(true);
 
   return (
-    <div className={style.form}>
+    <div className={style.form} id={id}>
       <div className={style.form__cnt}>
         <div className={style.form__header}>
           <h2
@@ -89,6 +89,13 @@ export default function Form({}: FormProps) {
             </a>
           </span>
         </div>
+
+        <Button
+            className={cn(style.form__button, style.form__button_mobile)}
+            appearance={"outline"}
+          >
+            Оставить заявку
+          </Button>
       </div>
     </div>
   );

@@ -7,6 +7,14 @@
     center;
   padding: 126px 14.3vw 0 10.7vw;
 
+  @media (max-width: 1220px) {
+    padding: 126px 100px 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 88px 10px 0;
+  }
+
   &__logo {
     display: flex;
     align-items: center;
@@ -15,13 +23,21 @@
     width: 192px;
     height: 306px;
     background: white;
+
+    @media (max-width: 1220px) {
+      display: none;      
+    }
   }
 
   &__slider {
     flex: auto;
-    height: 382px;
+    min-height: 382px;
     background: white;
     overflow: hidden;
     padding: 40px;
+
+    @media (max-width: 768px) {
+      padding: 20px;
+    }
   }
 }

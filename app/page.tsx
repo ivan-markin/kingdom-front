@@ -13,24 +13,39 @@ import Stages from "@/containers/Stages/Stages";
 import ExhibitionArea from "@/containers/ExhibitionArea/ExhibitionArea";
 import Faq from "@/components/FAQ/FAQ";
 import Footer from "@/containers/Footer/Footer";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <main className={style.main}>
       <HeroSection />
       <KeyFeatures />
-      <Houses />
+      <Houses id="houses" />
       <ParamsDisclaimer />
       <Params />
       <Included />
-      <Form />
+      <Image
+        className={style.image1}
+        src={'/form-image-mobile-1.jpg'}
+        width={355}
+        height={270}
+        alt=""
+      />
+      <Form id="form" />
       <Gallery />
-      <About />
+      <About id="about" />
       <AboutParams />
-      <Stages />
+      <Stages id="stages" />
       <ExhibitionArea />
+      <Image
+        className={style.image1}
+        src={'/form-image-mobile-2.jpg'}
+        width={355}
+        height={270}
+        alt=""
+      />
       <Form />
-      <Faq />
+      <Faq id="faq" />
       <Footer />
     </main>
   );

@@ -4,9 +4,19 @@
   justify-content: center;
   padding: 108px 40px;
 
+  @media (max-width: 768px) {
+    padding: 50px 20px;
+  }
+
   &__content {
     display: flex;
     gap: 20px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      width: 100%;
+      gap: 34px;
+    }
   }
 
   &__item {
@@ -18,10 +28,36 @@
     width: 28.4vw;
     border-left: 2px solid var(--primary-color);
     padding-left: 20px;
+
+    @media (max-width: 768px) {
+      flex-direction: row;
+      gap: 20px;
+      width: 100%;
+      height: auto;
+      border-bottom: 2px solid var(--primary-color);
+      border-left: none;
+      padding-bottom: 34px;
+      padding-left: 0;
+    }
   }
 
   &__itemValue {
     font-size: 80px;
     color: var(--primary-color);
+    white-space: nowrap;
+
+    @media (max-width: 1024px) {
+      font-size: 60px;
+    }
+    
+    @media (max-width: 768px) {
+      font-size: 48px;
+    }
+  }
+
+  &__itemDescription {
+    @media (max-width: 768px) {
+      width: 50%;
+    }
   }
 }

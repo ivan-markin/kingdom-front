@@ -9,12 +9,14 @@ export default function IncludedItem({
   return (
     <div className={style.includedItem}>
       <Image
+        className={style.includedItem__image}
         src={
           "http://localhost:1337" +
           item.attributes.icon.data.attributes.url
         }
         height={105}
         width={142}
+        quality={100}
         alt=""
       />
       <span

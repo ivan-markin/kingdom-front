@@ -5,5 +5,10 @@
 
   &__item {
     list-style: none;
+    transition: all .2s;
+
+    &:hover {
+      color: black;
+    }
   }
 }

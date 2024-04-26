@@ -4,4 +4,13 @@
   width: 100%;
   padding: 85px 10px 0;
   margin-bottom: 126px;
+
+  @media (max-width: 1024px) {    
+    padding-top: 60px;
+  }
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 40px;    
+  }
 }

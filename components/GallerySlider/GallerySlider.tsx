@@ -55,10 +55,20 @@ export default function GallerySlider({
             galleryRef.current = swiper;
           }}
           spaceBetween={10}
-          slidesPerView={"auto"}
-          slidesOffsetBefore={60}
+          slidesPerView={1}
+          slidesOffsetBefore={0}
           autoplay
           loop
+          breakpoints={{
+            769: {
+              slidesPerView: 'auto',
+              slidesOffsetBefore: 40
+            },
+            1025: {              
+              slidesPerView: 'auto',
+              slidesOffsetBefore: 60
+            }
+          }}
           ref={galleryRef}
         >
           {slides &&

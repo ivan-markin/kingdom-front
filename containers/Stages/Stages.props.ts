@@ -1,1 +1,3 @@
-export interface StagesProps {}
+export interface StagesProps {
+  id?: string;
+}

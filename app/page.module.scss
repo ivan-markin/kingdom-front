@@ -1,0 +1,12 @@
+.image1,
+.image2 {
+	height: 270px;
+	width: calc(100% - 20px);
+	border-radius: 6px;
+	object-fit: cover;	
+	margin: 0 0 6px 10px;
+
+	@media (min-width: 769px) {
+		display: none;
+	}
+}

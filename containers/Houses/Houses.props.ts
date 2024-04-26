@@ -1,1 +1,3 @@
-export interface HousesProps {}
+export interface HousesProps {
+  id?: string;
+}

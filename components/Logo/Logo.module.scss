@@ -3,4 +3,8 @@
   background-color: white;
   border-radius: 0 0 6px 6px;
   padding: 36px 20px 26px;
+
+  @media (max-width: 768px) {
+    padding: 16px 10px;
+  }
 }

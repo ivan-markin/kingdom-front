@@ -7,9 +7,7 @@ import { HouseItemProps } from "./HouseItem.props";
 import cn from "classnames";
 import { useEffect, useRef } from "react";
 
-export default function HouseItem({
-  item,
-}: HouseItemProps) {
+export default function HouseItem({ item }: HouseItemProps) {
   const houseRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
@@ -20,9 +18,7 @@ export default function HouseItem({
       const parentSection = target.closest(".houses-list");
 
       if (parentSection) {
-        const houseCards = Array.from(
-          parentSection.children
-        );
+        const houseCards = Array.from(parentSection.children);
         houseCards.forEach((card) => {
           if (!card.contains(target)) {
             card.classList.add("inactive");
@@ -36,9 +32,7 @@ export default function HouseItem({
       const parentSection = target.closest(".houses-list");
 
       if (parentSection) {
-        const houseCards = Array.from(
-          parentSection.children
-        );
+        const houseCards = Array.from(parentSection.children);
         houseCards.forEach((card) => {
           card.classList.remove("inactive");
         });
@@ -50,10 +44,7 @@ export default function HouseItem({
 
     return () => {
       houseCard?.removeEventListener("mouseover", onHover);
-      houseCard?.removeEventListener(
-        "mouseout",
-        onMouseOut
-      );
+      houseCard?.removeEventListener("mouseout", onMouseOut);
     };
   }, []);
 
@@ -61,17 +52,16 @@ export default function HouseItem({
     <Link
       id={String(item.id)}
       key={item.id}
-      href={`houses/${item.id}`}
+      // href={`houses/${item.id}`}
+      href={''}
       className={cn(style.house)}
+      onClick={(e) => e.preventDefault()}
       ref={houseRef}
     >
-      <div
-        className={cn(style.house__imageCnt, "image-cnt")}
-      >
+      <div className={cn(style.house__imageCnt, "image-cnt")}>
         <Image
           src={
-            "http://localhost:1337" +
-            item.attributes.cover.data.attributes.url
+            "http://localhost:1337" + item.attributes.cover.data.attributes.url
           }
           className={style.house__image}
           width={466}
@@ -81,23 +71,12 @@ export default function HouseItem({
       </div>
 
       <div className={style.house__content}>
-        <h3
-          className={cn("block-title", style.house__title)}
-        >
+        <h3 className={cn("block-title", style.house__title)}>
           {item.attributes.title}
         </h3>
-        <div
-          className={cn(
-            "regular-text",
-            style.house__description
-          )}
-        >
-          <span className={style.house__area}>
-            {item.attributes.area} кв.м
-          </span>
-          <span className={style.house__price}>
-            {item.attributes.price} ₽
-          </span>
+        <div className={cn("regular-text", style.house__description)}>
+          <span className={style.house__area}>{item.attributes.area} кв.м</span>
+          <span className={style.house__price}>{item.attributes.price} ₽</span>
         </div>
       </div>
     </Link>
