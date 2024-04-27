@@ -79,7 +79,7 @@ export default function GallerySlider({
               >
                 <Image
                   src={
-                    "http://95.163.228.113" +
+                    "http://95.163.228.113:1337" +
                     slide.attributes.photo.data.attributes
                       .url
                   }

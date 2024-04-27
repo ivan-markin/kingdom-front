@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   webpack(config) {
-    const fileLoaderRule = config.module.rules.find(
-      (rule) => rule.test?.test?.(".svg")
+    const fileLoaderRule = config.module.rules.find((rule) =>
+      rule.test?.test?.(".svg")
     );
 
     config.module.rules.push(
@@ -30,6 +30,12 @@ const nextConfig = {
       {
         protocol: "http",
         hostname: "localhost",
+        port: "1337",
+        pathname: "/uploads/**",
+      },
+      {
+        protocol: "http",
+        hostname: "95.163.228.113",
         port: "1337",
         pathname: "/uploads/**",
       },

@@ -49,7 +49,7 @@ export default async function ExhibitionArea({}: ExhibitionAreaProps) {
             className={style.exhibitionArea__image}
             src={
               data &&
-              "http://95.163.228.113" +
+              "http://95.163.228.113:1337" +
                 data.attributes.image.data.attributes.url
             }
             width={711}

@@ -3,7 +3,7 @@ import { error } from "console";
 export async function getStageItems() {
   try {
     const res = await fetch(
-      `${process.env.KINGDOM_PUBLIC_URL}/stage-items?populate=*`
+      `http://95.163.228.113:1337/api/stage-items?populate=*`
     );
     return res.json();
   } catch (e) {
