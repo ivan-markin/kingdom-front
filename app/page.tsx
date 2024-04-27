@@ -18,10 +18,10 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className={style.main}>
-      {/* <HeroSection />
-      <KeyFeatures /> */}
+      <HeroSection />
+      <KeyFeatures />
       <Houses id="houses" />
-      {/* <ParamsDisclaimer />
+      <ParamsDisclaimer />
       <Params />
       <Included />
       <Image
@@ -46,7 +46,7 @@ export default function Home() {
       />
       <Form />
       <Faq id="faq" />
-      <Footer /> */}
+      <Footer />
     </main>
   );
 }

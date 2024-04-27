@@ -76,7 +76,7 @@ export default async function ExhibitionArea({}: ExhibitionAreaProps) {
           </div>
           <div className={style.exhibitionArea__ctaBlock}>
             <span className={style.exhibitionArea__workingHours}>
-              Посещение по предварительной записи, ежедневно с 9:00 до 21:00
+              {data.attributes.description}
             </span>
             <Button className={style.exhibitionArea__cta} appearance={"light"}>
               Записаться
