@@ -7,6 +7,7 @@ import cn from "classnames";
 
 export default async function Houses({ id }: HousesProps) {
   const { data } = await getHouses();
+  console.log(data)
 
   return (
     <div className={cn(style.houses, "houses-list")} id={id}>
