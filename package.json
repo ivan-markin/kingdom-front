@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "classnames": "^2.5.1",
+    "dotenv": "^16.4.5",
     "flubber": "^0.4.2",
     "framer-motion": "^11.0.28",
     "generate-react-cli": "^8.4.1",

@@ -12,11 +12,13 @@
   &__item {
     list-style: none;
     white-space: nowrap;
-    color: black;
+    color: var(--primary-color);
+    font-size: 14px;
+    text-transform: uppercase;
     transition: all 0.2s;
 
     &:hover {
-      color: var(--primary-color);
+      color: black;
     }
   }
 

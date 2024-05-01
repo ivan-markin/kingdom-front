@@ -34,12 +34,17 @@ const nextConfig = {
         pathname: "/uploads/**",
       },
       {
-        protocol: "http",
-        hostname: "95.163.228.113",
-        port: "1337",
+        protocol: "https",
+        hostname: "strapi.dom-king.ru",
+        port: "",
         pathname: "/uploads/**",
       },
     ],
+  },
+  env: {
+    KINGDOM_PUBLIC_URL: process.env.KINGDOM_PUBLIC_URL,
+    KINGDOM_API_URL: process.env.KINGDOM_API_URL,
+    KINGDOM_API_KEY: process.env.KINGDOM_API_KEY,
   },
 };
 

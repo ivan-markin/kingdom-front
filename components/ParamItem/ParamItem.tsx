@@ -10,7 +10,7 @@ export default function ParamItem({
     <div className={style.paramItem}>
       <Image
         src={
-          "http://95.163.228.113:1337" +
+          process.env.KINGDOM_PUBLIC_URL +
           item.attributes.image.data.attributes.url
         }
         width={158}
