@@ -1,8 +1,8 @@
-import style from "./MenuButton.module.scss";
-import { MenuButtonProps } from "./MenuButton.props";
-import cn from "classnames";
+import style from './MenuButton.module.scss';
+import {MenuButtonProps} from './MenuButton.props';
+import cn from 'classnames';
 
-export default function MenuButton({ isOpen, onClick }: MenuButtonProps) {
+export default function MenuButton({isOpen, onClick}: MenuButtonProps) {
   return (
     <button
       className={cn(style.menuButton, {

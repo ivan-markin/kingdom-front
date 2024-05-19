@@ -1,6 +1,7 @@
 .button {
+  font-family: inherit;
   height: 80px;
-  background-color: black;
+  background-color: var(--primary-color);
   border-radius: var(--border-radius);
   font-size: 20px;
   font-weight: 500;
@@ -12,7 +13,7 @@
   padding: 0 40px;
 
   &:hover {
-    background: var(--primary-color);
+    background: var(--button-hover-color);
   }
 
   &_outline {
@@ -32,5 +33,21 @@
     &:hover {
       background: #c6d5ef;
     }
+  }
+
+  &_outlineDark {
+    background: none;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+
+    &:hover {
+      background: var(--primary-color);
+      color: white;
+    }
+  }
+
+  &_medium {
+    height: 60px;
+    font-size: 18px;
   }
 }

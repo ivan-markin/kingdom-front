@@ -1,0 +1,108 @@
+.sideMenu {
+  display: flex;
+  align-items: flex-end;
+  border-radius: 6px;
+  background: #eaf0f9;
+  padding-bottom: 50px;
+  margin-left: 10px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    height: 100%;
+    background: white;
+    overflow: visible;
+    border-radius: 6px 0 0 6px;
+  }
+
+  &__actionItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    background-color: #fff;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 20px;
+    position: relative;
+    transition: all 0.2s;
+    padding: 0 16px;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+
+    &_square {
+      width: 44px;
+      padding: 0;
+    }
+
+    &_gray {
+      background: #f2f3fc;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 10px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__menuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 40px;
+    left: -20px;
+    transform: translateX(-100%);
+    border-radius: 6px;
+    background: white;
+    width: 44px;
+    height: 44px;
+    z-index: 11;
+
+    @media (min-width: 769px) {
+      display: none;
+    }
+  }
+
+  &__menuBg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(#000000, 0.5);
+  }
+
+  &__menuContacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 40px 40px;
+
+    @media (min-width: 769px) {
+      display: none;
+    }
+  }
+
+  &__menuSocials {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__menuPhone {
+    white-space: nowrap;
+    font-size: 16px;
+  }
+}

@@ -55,34 +55,14 @@
       width: 50%;
       max-width: none;
     }
-    
+
     @media (max-width: 768px) {
       width: 90%;
       max-width: none;
     }
   }
 
-  &__itemImage {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    margin-bottom: 20px;
-
-    @media (min-width: 769px) {
-      display: none;
-      // position: absolute;
-      // left: var(--key-feature-image-1-left);
-      // top: var(--key-feature-image-1-top);
-      // width: 434px;
-      // height: 264px;
-      // transition: all .5s;
-      // opacity: 0;
-      // visibility: hidden;      
-    }
+  &__itemCnt {
+    overflow: hidden;
   }
-
-  // &:hover &__itemImage {
-  //   opacity: 1;
-  //   visibility: visible;
-  // }
 }

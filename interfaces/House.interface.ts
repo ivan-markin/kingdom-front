@@ -8,6 +8,7 @@ export interface iHouse {
     title: string;
     updatedAt: string;
     area: number;
+    alias: string;
     cover: {
       data: {
         attributes: {

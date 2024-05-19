@@ -1,4 +1,4 @@
-import { error } from "console";
+import {error} from 'console';
 
 export async function getHouses() {
   try {
@@ -8,8 +8,8 @@ export async function getHouses() {
         headers: {
           Authorization: `bearer ${process.env.KINGDOM_API_KEY}`,
         },
-        next: { revalidate: 600 },
-      }
+        next: {revalidate: 600},
+      },
     );
     return res.json();
   } catch (e) {

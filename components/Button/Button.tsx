@@ -1,13 +1,11 @@
-import style from "./Button.module.scss";
-import { ButtonProps } from "./Button.props";
-import { Geologica } from "next/font/google";
-import cn from "classnames";
-
-const geologica = Geologica({ subsets: ["cyrillic"] });
+import style from './Button.module.scss';
+import {ButtonProps, ButtonSizeEnum, ButtonTypeEnum} from './Button.props';
+import cn from 'classnames';
 
 export default function Button({
   children,
   appearance,
+  size = ButtonSizeEnum.LARGE,
   className,
 }: ButtonProps) {
   return (
@@ -15,11 +13,13 @@ export default function Button({
       className={cn(
         style.button,
         {
-          [style.button_light]: appearance === "light",
-          [style.button_outline]: appearance === "outline",
+          [style.button_light]: appearance === ButtonTypeEnum.LIGHT,
+          [style.button_outline]: appearance === ButtonTypeEnum.OUTLINE,
+          [style.button_outlineDark]:
+            appearance === ButtonTypeEnum.DARK_OUTLINE,
+          [style.button_medium]: size === ButtonSizeEnum.MEDIUM,
         },
-        geologica.className,
-        className
+        className,
       )}
     >
       {children}

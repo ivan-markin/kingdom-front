@@ -1,0 +1,13 @@
+.actionPanel {
+  display: flex;
+  border-radius: 10px;
+  background: rgba(70, 85, 111, 0.39);
+  backdrop-filter: blur(10px);
+  width: 340px;
+  height: 60px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 10;
+  // transform: translateX(-50%);
+}

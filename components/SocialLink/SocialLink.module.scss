@@ -3,10 +3,11 @@
   align-items: center;
 
   svg path {
+    fill: var(--primary-color);
     transition: all 0.2s;
   }
 
   &:hover svg path {
-    fill: var(--primary-color);
+    fill: var(--hover-color);
   }
 }

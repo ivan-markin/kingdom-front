@@ -9,13 +9,24 @@
   background: none;
   cursor: pointer;
   transition: all 0.2s;
+  padding: 0;
 
   &:disabled {
     opacity: 0.3;
     cursor: default;
   }
 
+  &_light {
+    border-color: white;
+  }
+
+  &_light &__arrow svg path {
+    stroke: white;
+  }
+
   &__arrow {
+    display: flex;
+    align-items: center;
     transition: transform 0.2s;
 
     &_prev {

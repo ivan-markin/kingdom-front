@@ -15,7 +15,7 @@
     display: block;
     height: 2px;
     width: 24px;
-    background-color: black;
+    background-color: var(--primary-color);
     position: absolute;
     left: calc(50% - 12px);
     transition: all 0.25s;

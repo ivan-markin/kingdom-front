@@ -1,0 +1,83 @@
+.keyFeaturesItem {
+  display: flex;
+  align-items: flex-end;
+  height: 202px;
+  border-bottom: 2px solid var(--primary-color);
+  position: relative;
+  padding-bottom: 30px;
+
+  @media (max-width: 1024px) {
+    height: 160px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    width: 60%;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      max-width: 300px;
+
+      @media (max-width: 768px) {
+        max-width: none;
+      }
+    }
+  }
+
+  &__description {
+    display: block;
+  }
+
+  &__itemCnt {
+    overflow: hidden;
+
+    &_description {
+      width: 40%;
+      max-width: 420px;
+
+      @media (min-width: 1920px) {
+        width: 50%;
+        max-width: none;
+      }
+
+      @media (max-width: 768px) {
+        width: 90%;
+        max-width: none;
+      }
+    }
+  }
+
+  &__itemImage {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 20px;
+
+    @media (min-width: 769px) {
+      display: none;
+      // position: absolute;
+      // left: var(--key-feature-image-1-left);
+      // top: var(--key-feature-image-1-top);
+      // width: 434px;
+      // height: 264px;
+      // transition: all .5s;
+      // opacity: 0;
+      // visibility: hidden;
+    }
+  }
+
+  // &:hover &__itemImage {
+  //   opacity: 1;
+  //   visibility: visible;
+  // }
+}

@@ -1,0 +1,25 @@
+.slider {
+  width: 100%;
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: fit-content;
+    font-size: 20px;
+    color: var(--primary-color);
+    position: relative;
+  }
+
+  &__slideImage {
+    width: 650px;
+    height: 430px;
+    border-radius: 6px;
+  }
+
+  &__playBtn {
+    position: absolute;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+  }
+}

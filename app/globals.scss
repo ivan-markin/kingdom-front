@@ -1,11 +1,13 @@
 :root {
-  --primary-color: #4F65AD;
+  --primary-color: #4f65ad;
+  --hover-color: #9aa9db;
+  --button-hover-color: #5d71b4;
   --dark-gray-color: #252a30;
   --beige-color: #e6e4d6;
   --input-color: #444651;
   --input-hover-color: #565967;
-  --light-bg-color: #E6E9F8;
-  --border-radius: 6px;  
+  --light-bg-color: #e6e9f8;
+  --border-radius: 6px;
 
   --key-feature-image-1-left: 0px;
   --key-feature-image-1-top: 0px;
@@ -49,7 +51,7 @@ a {
   @media (min-width: 1920px) {
     font-size: 40px;
   }
-  
+
   @media (max-width: 1024px) {
     font-size: 28px;
   }
@@ -67,7 +69,7 @@ a {
   @media (min-width: 1920px) {
     font-size: 26px;
   }
-  
+
   @media (max-width: 1024px) {
     font-size: 16px;
   }

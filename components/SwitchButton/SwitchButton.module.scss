@@ -1,0 +1,39 @@
+.switchButton {
+  flex: 1;
+  height: 52px;
+  background: none;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  border: none;
+  position: relative;
+  transition: opacity 0.2s;
+  cursor: pointer;
+  padding: 0 28px;
+
+  &:not(&_active):hover {
+    opacity: 0.7;
+  }
+
+  &_active {
+    color: var(--primary-color);
+    cursor: default;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.activeBg {
+  background: white;
+  border-radius: 6px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}

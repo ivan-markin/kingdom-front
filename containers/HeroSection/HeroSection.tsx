@@ -1,20 +1,20 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import style from "./HeroSection.module.scss";
-import { HeroSectionProps } from "./HeroSection.props";
-import heroImage from "/public/hero-image.jpg";
-import heroImageMobile from "/public/hero-image_mobile.jpg";
-import Logo from "../../components/Logo/Logo";
-import cn from "classnames";
-import SocialLink from "../../components/SocialLink/SocialLink";
-import Button from "../../components/Button/Button";
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import MenuButton from "@/components/MenuButton/MenuButton";
-import HeroMenu from "@/components/HeroMenu/HeroMenu";
-import { useMediaQuery } from "@/hooks/use-media-query";
-import Link from "next/link";
+import Image from 'next/image';
+import style from './HeroSection.module.scss';
+import {HeroSectionProps} from './HeroSection.props';
+import heroImage from '/public/hero-image.jpg';
+import heroImageMobile from '/public/hero-image_mobile.jpg';
+import Logo from '../../components/Logo/Logo';
+import cn from 'classnames';
+import SocialLink from '../../components/SocialLink/SocialLink';
+import Button from '../../components/Button/Button';
+import {useEffect, useState} from 'react';
+import MenuButton from '@/components/MenuButton/MenuButton';
+import {useMediaQuery} from '@/hooks/use-media-query';
+import Link from 'next/link';
+import {ButtonTypeEnum} from '@/components/Button/Button.props';
+import SideMenuSection from '@/components/SideMenuSection/SideMenuSection';
 
 const menuVariants = {
   initial: {
@@ -24,7 +24,7 @@ const menuVariants = {
   },
   animate: {
     opacity: 1,
-    width: "auto",
+    width: 'auto',
     marginLeft: 10,
   },
 };
@@ -32,12 +32,12 @@ const menuVariants = {
 export default function HeroSection({}: HeroSectionProps) {
   const [isShown, setShown] = useState<boolean>(false);
   const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isMobile = useMediaQuery('(max-width: 768px)');
 
   useEffect(() => {
     if (isMenuOpen && isMobile) {
-      document.body.classList.add("fixed");
-    } else document.body.classList.remove("fixed");
+      document.body.classList.add('fixed');
+    } else document.body.classList.remove('fixed');
 
     setShown(true);
   }, [isMenuOpen, isMobile]);
@@ -55,7 +55,7 @@ export default function HeroSection({}: HeroSectionProps) {
             [style.heroSection__image_shown]: isShown,
           })}
           quality={80}
-          alt=""
+          alt=''
         />
         <div className={style.heroSection__top}>
           <Logo
@@ -71,9 +71,9 @@ export default function HeroSection({}: HeroSectionProps) {
             <a
               className={cn(
                 style.heroSection__phone,
-                style.heroSection__actionItem
+                style.heroSection__actionItem,
               )}
-              href="tel:89101234567"
+              href='tel:89101234567'
             >
               +7 910 123-45-67
             </a>
@@ -81,25 +81,25 @@ export default function HeroSection({}: HeroSectionProps) {
               <span
                 className={cn(
                   style.heroSection__actionItem,
-                  style.heroSection__actionItem_square
+                  style.heroSection__actionItem_square,
                 )}
               >
-                <SocialLink type={"whatsapp"} />
+                <SocialLink type={'whatsapp'} />
               </span>
               <span
                 className={cn(
                   style.heroSection__actionItem,
-                  style.heroSection__actionItem_square
+                  style.heroSection__actionItem_square,
                 )}
               >
-                <SocialLink type={"telegram"} />
+                <SocialLink type={'telegram'} />
               </span>
             </div>
             {/* <MainMenu /> */}
             <span
               className={cn(
                 style.heroSection__actionItem,
-                style.heroSection__actionItem_square
+                style.heroSection__actionItem_square,
               )}
             >
               <MenuButton
@@ -139,11 +139,13 @@ export default function HeroSection({}: HeroSectionProps) {
               <Link href={'#form'} className={style.heroSection__ctaLink}>
                 <Button
                   className={style.heroSection__cta}
-                  appearance={isMobile ? 'light' : 'dark'}
+                  appearance={
+                    isMobile ? ButtonTypeEnum.LIGHT : ButtonTypeEnum.DARK
+                  }
                 >
                   Оставить заявку
                 </Button>
-              </Link>              
+              </Link>
               {/* <Image
                 src={"/live-chat-icon.svg"}
                 width={60}
@@ -154,67 +156,11 @@ export default function HeroSection({}: HeroSectionProps) {
           </div>
         </div>
       </div>
-      <motion.div
-        className={style.heroSection__menu}
-        variants={menuVariants}
-        initial={"initial"}
-        animate={isMenuOpen ? "animate" : "initial"}
-        transition={{ type: "spring", duration: 0.7 }}
-      >
-        <div className={style.heroSection__menuButton}>
-          <MenuButton
-            onClick={() => setMenuOpen(!isMenuOpen)}
-            isOpen={isMenuOpen}
-          />
-        </div>
-
-        <HeroMenu onClick={() => setMenuOpen(false)} />
-
-        <div className={style.heroSection__menuContacts}>
-          <div className={style.heroSection__menuSocials}>
-            <span
-              className={cn(
-                style.heroSection__actionItem,
-                style.heroSection__actionItem_square,
-                style.heroSection__actionItem_gray
-              )}
-            >
-              <SocialLink type={"whatsapp"} />
-            </span>
-            <span
-              className={cn(
-                style.heroSection__actionItem,
-                style.heroSection__actionItem_square,
-                style.heroSection__actionItem_gray
-              )}
-            >
-              <SocialLink type={"telegram"} />
-            </span>
-          </div>
-          <a
-            className={cn(
-              style.heroSection__actionItem,
-              style.heroSection__actionItem_gray,
-              style.heroSection__menuPhone
-            )}
-            href="tel:89101234567"
-          >
-            +7 910 123-45-67
-          </a>
-        </div>
-      </motion.div>
-
-      <AnimatePresence>
-        {isMobile && isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className={style.heroSection__menuBg}
-            onClick={() => setMenuOpen(false)}
-          ></motion.div>
-        )}
-      </AnimatePresence>
+      <SideMenuSection
+        toggleHandler={() => setMenuOpen(!isMenuOpen)}
+        closeHandler={() => setMenuOpen(false)}
+        isMenuOpen={isMenuOpen}
+      />
     </div>
   );
 }

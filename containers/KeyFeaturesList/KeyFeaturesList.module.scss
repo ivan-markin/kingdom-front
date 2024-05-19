@@ -1,0 +1,28 @@
+.keyFeatures {
+  background: var(--beige-color);
+  position: relative;
+  overflow: hidden;
+  padding: 40px 60px 80px;
+
+  @media (max-width: 1024px) {
+    padding: 40px 40px 60px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px 10px 40px;
+  }
+
+  &__bgImage {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: calc(50% - 175px);
+    transition: top 1s;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}

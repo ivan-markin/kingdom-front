@@ -1,3 +1,3 @@
 export interface FaqProps {
-  id: string;
+  id?: string;
 }

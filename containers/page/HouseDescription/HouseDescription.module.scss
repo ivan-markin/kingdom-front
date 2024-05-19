@@ -1,0 +1,62 @@
+.houseDescription {
+  display: flex;
+  gap: 40px;
+  padding-left: 60px;
+  margin-bottom: 110px;
+
+  @media (max-width: 1024px) {
+    flex-direction: column-reverse;
+    gap: 20px;
+    padding-left: 40px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 10px;
+    margin-bottom: 80px;
+  }
+
+  &__complectPreview {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 30px;
+    flex: 1;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex: 1;
+    font-size: 2.22vw;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    line-height: 1.3;
+
+    @media (max-width: 1024px) {
+      font-size: 24px;
+    }
+
+    span {
+      width: 90%;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__complectPreviewList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__complectItem {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    color: var(--primary-color);
+  }
+}
