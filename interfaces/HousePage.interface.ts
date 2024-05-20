@@ -36,6 +36,11 @@ interface IHouseImage {
   id: number;
   attributes: {
     url: string;
+    formats: {
+      thumbnail: {
+        url: string;
+      };
+    };
   };
 }
 

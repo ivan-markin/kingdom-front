@@ -74,9 +74,10 @@ export default function PageHero({data}: PageHeroProps) {
           }
           width={720}
           height={590}
-          quality={100}
-          placeholder='blur'
-          blurDataURL='/blurred-house.jpg'
+          quality={85}
+          placeholder={'blur'}
+          blurDataURL={'/blurred-house.jpg'}
+          priority
           alt=''
         />
         <span className={cn(style.hero__menuButton)}>

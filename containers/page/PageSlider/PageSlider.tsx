@@ -68,6 +68,8 @@ export default function PageSlider({data}: PageSliderProps) {
                   className={style.slide__image}
                   src={process.env.KINGDOM_PUBLIC_URL + slide.attributes.url}
                   fill
+                  placeholder={'blur'}
+                  blurDataURL={slide.attributes.formats.thumbnail.url}
                   alt=''
                 />
               </SwiperSlide>
