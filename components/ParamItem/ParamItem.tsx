@@ -29,13 +29,13 @@ export default function ParamItem({item}: ParamItemProps) {
         <span className={cn('regular-text', style.paramItem__description)}>
           {item.attributes.shortDescription}
 
-          <Image
+          {/* <Image
             className={style.paramItem__infoIcon}
             src={'/info-icon.svg'}
             width={20}
             height={20}
             alt=''
-          />
+          /> */}
         </span>
       </motion.span>
     </div>
