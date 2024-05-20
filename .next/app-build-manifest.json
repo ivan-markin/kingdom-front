@@ -17,11 +17,6 @@
       "static/chunks/main-app.js",
       "static/css/app/houses/[alias]/page.css",
       "static/chunks/app/houses/[alias]/page.js"
-    ],
-    "/not-found": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/not-found.js"
     ]
   }
 }
