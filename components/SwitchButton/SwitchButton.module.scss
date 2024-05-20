@@ -12,6 +12,11 @@
   cursor: pointer;
   padding: 0 28px;
 
+  @media (max-width: 768px) {
+    font-size: 14px;
+    height: 40px;
+  }
+
   &:not(&_active):hover {
     opacity: 0.7;
   }

@@ -83,6 +83,12 @@
     min-height: 590px;
     transition: all 1s cubic-bezier(0.51, 0.92, 0.24, 1.1);
 
+    @media (max-width: 768px) {
+      width: 100%;
+      height: auto;
+      min-height: auto;
+    }
+
     &_shown {
       width: 100%;
     }
