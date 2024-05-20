@@ -1,22 +1,41 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
+    "/_not-found": [
+      "static/chunks/webpack-d161f42b65dbff24.js",
+      "static/chunks/fd9d1056-803f3afc98c64581.js",
+      "static/chunks/69-bf0faca87d920f27.js",
+      "static/chunks/main-app-b4a87f4108a8a1d3.js",
+      "static/chunks/app/_not-found-7544f47909dc9de3.js"
     ],
     "/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
+      "static/chunks/webpack-d161f42b65dbff24.js",
+      "static/chunks/fd9d1056-803f3afc98c64581.js",
+      "static/chunks/69-bf0faca87d920f27.js",
+      "static/chunks/main-app-b4a87f4108a8a1d3.js",
+      "static/css/e2a144155b237d27.css",
+      "static/chunks/app/layout-73c16678f561eda4.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-d161f42b65dbff24.js",
+      "static/chunks/fd9d1056-803f3afc98c64581.js",
+      "static/chunks/69-bf0faca87d920f27.js",
+      "static/chunks/main-app-b4a87f4108a8a1d3.js",
+      "static/chunks/832-e4d153eb0f6e7e45.js",
+      "static/css/6702439bd74701f1.css",
+      "static/chunks/86-f648de854592000d.js",
+      "static/css/92075654e3035471.css",
+      "static/chunks/app/page-428d0828f0bfb8a3.js"
     ],
     "/houses/[alias]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/houses/[alias]/page.css",
-      "static/chunks/app/houses/[alias]/page.js"
+      "static/chunks/webpack-d161f42b65dbff24.js",
+      "static/chunks/fd9d1056-803f3afc98c64581.js",
+      "static/chunks/69-bf0faca87d920f27.js",
+      "static/chunks/main-app-b4a87f4108a8a1d3.js",
+      "static/chunks/832-e4d153eb0f6e7e45.js",
+      "static/css/6702439bd74701f1.css",
+      "static/chunks/86-f648de854592000d.js",
+      "static/css/05e8370cf923bc28.css",
+      "static/chunks/app/houses/[alias]/page-809f69ae29d11e57.js"
     ]
   }
 }

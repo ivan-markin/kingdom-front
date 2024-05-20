@@ -2,17 +2,22 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 80px 20px;
+  max-width: 1900px;
   padding: 0 60px;
-  margin-bottom: 70px;
+  margin: 0 auto 70px;
+
+  @media (min-width: 2560px) {
+    margin: 0 auto 140px;
+  }
 
   @media (max-width: 1024px) {
     padding: 0 40px;
-  } 
+  }
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     border-bottom: 2px solid var(--primary-color);
     padding: 0 20px 50px;
     margin: 0 10px 50px;
-  }  
+  }
 }

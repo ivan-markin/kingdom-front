@@ -25,6 +25,10 @@
       max-height: 900px;
     }
 
+    @media (min-width: 2560px) {
+      max-height: 1100px;
+    }
+
     @media (max-width: 1024px) {
       max-height: 700px;
     }

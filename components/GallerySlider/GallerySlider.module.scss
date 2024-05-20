@@ -18,8 +18,8 @@
 
   &__slider {
     @media (max-width: 768px) {
-      padding: 0 10px; 
-    }    
+      padding: 0 10px;
+    }
   }
 
   &__controls {
@@ -43,10 +43,10 @@
 
   img {
     @media (min-width: 1920px) {
-      width: 760px;
+      width: 40vw;
       height: auto;
     }
-    
+
     @media (max-width: 768px) {
       width: 100%;
       height: auto;

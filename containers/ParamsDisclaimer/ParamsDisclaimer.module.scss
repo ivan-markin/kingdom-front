@@ -1,32 +1,54 @@
 .section {
-  display: flex;
-  align-items: flex-start;
-  gap: 108px;
   min-height: 600px;
-  background: url("/params-disclaimer-bg.jpg") no-repeat
-    center bottom;
+  background: url('/params-disclaimer-bg.jpg') no-repeat center bottom;
   background-size: contain;
+  width: 100%;
   padding: 0 60px 100px;
   margin-bottom: 70px;
 
-  @media (min-width: 1920px) {    
+  @media (min-width: 1441px) {
     background-size: 100%;
   }
-  
-  @media (max-width: 1024px) {    
-    gap: 60px;
+
+  @media (min-width: 2560px) {
+    justify-content: center;
+    padding: 0 60px 400px;
+    margin-bottom: 140px;
+  }
+
+  @media (max-width: 1024px) {
     min-height: 450px;
     padding: 0 40px 100px;
   }
 
-  @media (max-width: 768px) {        
-    flex-direction: column;
-    gap: 40px;
+  @media (max-width: 768px) {
     min-height: none;
     background-size: 400%;
     background-position: left bottom;
     padding: 0 10px 280px;
     margin-bottom: 80px;
+  }
+}
+
+.sectionCnt {
+  display: flex;
+  align-items: flex-start;
+  gap: 108px;
+  width: fit-content;
+
+  @media (min-width: 2560px) {
+    width: 1900px;
+    padding: 0 60px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1024px) {
+    gap: 60px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 40px;
   }
 }
 

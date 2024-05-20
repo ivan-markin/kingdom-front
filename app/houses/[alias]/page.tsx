@@ -14,6 +14,7 @@ import Form from '@/components/Form/Form';
 import Faq from '@/components/FAQ/FAQ';
 import Footer from '@/containers/Footer/Footer';
 import ActionPanel from '@/components/ActionPanel/ActionPanel';
+import Reviews from '@/containers/Reviews/Reviews';
 
 const metadata: Metadata = {
   title: 'Дом',
@@ -48,6 +49,7 @@ export default async function HousePage({params}: {params: {alias: string}}) {
       <span id='complectation'>
         <Complectation data={house} />
       </span>
+      <Reviews />
       <ExhibitionArea />
       <Form id='form' />
       <Faq />

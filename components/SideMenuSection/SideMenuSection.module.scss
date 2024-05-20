@@ -9,15 +9,17 @@
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: space-between;
     position: absolute;
     top: 0;
     right: 0;
     z-index: 10;
-    height: 100%;
+    height: 100vh;
     background: white;
-    overflow: visible;
+    overflow: hidden;
     border-radius: 6px 0 0 6px;
+    padding-bottom: 20px;
   }
 
   &__actionItem {
@@ -82,7 +84,8 @@
     z-index: 9;
     width: 100vw;
     height: 100vh;
-    background: rgba(#000000, 0.5);
+    background: rgba(#303e7d, 0.5);
+    backdrop-filter: blur(5px);
   }
 
   &__menuContacts {
@@ -104,5 +107,6 @@
   &__menuPhone {
     white-space: nowrap;
     font-size: 16px;
+    color: var(--primary-color);
   }
 }

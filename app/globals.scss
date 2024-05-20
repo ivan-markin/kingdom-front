@@ -4,6 +4,7 @@
   --button-hover-color: #5d71b4;
   --dark-gray-color: #252a30;
   --beige-color: #e6e4d6;
+  --light-blue-color: #eaf0f9;
   --input-color: #444651;
   --input-hover-color: #565967;
   --light-bg-color: #e6e9f8;
@@ -97,4 +98,20 @@ a {
   //     opacity: 0.2;
   //   }
   // }
+}
+
+.scrollbar {
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 2px;
+  }
 }

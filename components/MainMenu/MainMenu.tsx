@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import { useEffect, useRef, useState } from "react";
-import style from "./MainMenu.module.scss";
-import { MainMenuProps } from "./MainMenu.props";
-import { AnimatePresence, motion } from "framer-motion";
-import cn from "classnames";
+import {useEffect, useRef, useState} from 'react';
+import style from './MainMenu.module.scss';
+import {MainMenuProps} from './MainMenu.props';
+import {AnimatePresence, motion} from 'framer-motion';
+import cn from 'classnames';
 
 export const menuItems = [
-  { id: 0, name: "Наши проекты", link: "" },
-  { id: 1, name: "О компании", link: "" },
-  { id: 2, name: "Этапы работы", link: "" },
-  { id: 3, name: "Ответы на вопросы", link: "" },
+  {id: 0, name: 'Наши проекты', link: ''},
+  {id: 1, name: 'О компании', link: ''},
+  {id: 2, name: 'Этапы работы', link: ''},
+  {id: 3, name: 'Ответы на вопросы', link: ''},
 ];
 
 const dropdown = {
@@ -54,17 +54,17 @@ export default function MainMenu({}: MainMenuProps) {
     };
 
     const closeOnEscape = (e: KeyboardEvent) => {
-      if (e.code === "Escape") {
+      if (e.code === 'Escape') {
         setIsOpen(false);
       }
     };
 
-    document.addEventListener("click", closeOnClickOutside);
-    document.addEventListener("keydown", closeOnEscape);
+    document.addEventListener('click', closeOnClickOutside);
+    document.addEventListener('keydown', closeOnEscape);
 
     return () => {
-      document.removeEventListener("click", closeOnClickOutside);
-      document.removeEventListener("keydown", closeOnEscape);
+      document.removeEventListener('click', closeOnClickOutside);
+      document.removeEventListener('keydown', closeOnEscape);
     };
   }, [isOpen]);
 
@@ -85,9 +85,9 @@ export default function MainMenu({}: MainMenuProps) {
         {isOpen && (
           <motion.div
             variants={dropdown}
-            initial={"initial"}
-            animate={"animate"}
-            exit={"initial"}
+            initial={'initial'}
+            animate={'animate'}
+            exit={'initial'}
             className={style.mainMenu__dropdown}
             ref={dropdownRef}
           >

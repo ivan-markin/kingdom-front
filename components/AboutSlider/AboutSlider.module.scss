@@ -7,6 +7,10 @@
   flex-direction: column;
   gap: 30px;
   background: white;
+
+  @media (min-width: 1920px) {
+    padding-right: 200px;
+  }
 }
 
 .sliderCnt {

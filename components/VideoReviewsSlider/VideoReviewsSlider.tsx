@@ -11,6 +11,8 @@ import Image from 'next/image';
 import cn from 'classnames';
 import PlayButton from '../PlayButton/PlayButton';
 import {AnimatePresence, motion} from 'framer-motion';
+import SliderButton from '../SliderButton/SliderButton';
+import {SliderButtonColorEnum} from '../SliderButton/SliderButton.props';
 
 const playVariants = {
   initial: {
@@ -28,7 +30,12 @@ export default function VideoReviewsSlider({slides}: VideoReviewsSliderProps) {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <div className={style.slider}>
+    <div
+      className={cn(style.slider, {
+        [style.slider_start]: activeIndex === 0,
+        [style.slider_end]: activeIndex === slides.length - 1,
+      })}
+    >
       <Swiper
         modules={[Autoplay, EffectFade]}
         onSwiper={(swiper) => {
@@ -38,10 +45,16 @@ export default function VideoReviewsSlider({slides}: VideoReviewsSliderProps) {
           setActiveIndex(videoReviewsGalleryRef.current.activeIndex)
         }
         spaceBetween={10}
-        slidesPerView={'auto'}
+        slidesPerView={1}
         speed={600}
-        autoplay
-        centeredSlides
+        autoplay={true}
+        breakpoints={{
+          769: {
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            autoplay: false,
+          },
+        }}
         ref={videoReviewsGalleryRef}
       >
         {slides.map((item, i) => (
@@ -67,7 +80,6 @@ export default function VideoReviewsSlider({slides}: VideoReviewsSliderProps) {
                   variants={playVariants}
                   initial={'initial'}
                   animate={'animate'}
-                  exit={'initial'}
                   transition={{delay: 0.5}}
                 >
                   <PlayButton />
@@ -77,18 +89,30 @@ export default function VideoReviewsSlider({slides}: VideoReviewsSliderProps) {
           </SwiperSlide>
         ))}
       </Swiper>
-      {/* <div className={style.pageSlider__controls}>
-    <SliderButton
-      type={'prev'}
-      color={SliderButtonColorEnum.LIGHT}
-      onClick={() => pageGalleryRef.current.slidePrev()}
-    />
-    <SliderButton
-      type={'next'}
-      color={SliderButtonColorEnum.LIGHT}
-      onClick={() => pageGalleryRef.current.slideNext()}
-    />
-  </div> */}
+      <span className={style.slider__prevBtn}>
+        <SliderButton
+          type={'prev'}
+          color={
+            activeIndex === 0
+              ? SliderButtonColorEnum.DARK
+              : SliderButtonColorEnum.LIGHT
+          }
+          onClick={() => videoReviewsGalleryRef.current.slidePrev()}
+          isDisabled={activeIndex === 0 ? true : false}
+        />
+      </span>
+      <span className={style.slider__nextBtn}>
+        <SliderButton
+          type={'next'}
+          color={
+            activeIndex === slides.length - 1
+              ? SliderButtonColorEnum.DARK
+              : SliderButtonColorEnum.LIGHT
+          }
+          onClick={() => videoReviewsGalleryRef.current.slideNext()}
+          isDisabled={activeIndex === slides.length - 1 ? true : false}
+        />
+      </span>
     </div>
   );
 }
