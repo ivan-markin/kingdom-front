@@ -88,11 +88,19 @@ export default function Form({id}: FormProps) {
           </span>
         </div>
         <form
-          className={style.form__content}
+          className={cn(style.form__content, {
+            [style.form__content_error]:
+              errors.name || errors.phone || errors.email,
+          })}
           onSubmit={handleSubmit(submit, error)}
           noValidate
         >
-          <div className={style.form__inputs}>
+          <div
+            className={cn(style.form__inputs, {
+              [style.form__inputs_error]:
+                errors.name || errors.phone || errors.email,
+            })}
+          >
             <span className={style.form__inputCnt}>
               <input
                 className={cn(geologica.className, style.form__input, {
@@ -181,13 +189,6 @@ export default function Form({id}: FormProps) {
             Соглашаюсь с <a href=''>условиями обработки персональных данных</a>
           </span>
         </div>
-
-        <Button
-          className={cn(style.form__button, style.form__button_mobile)}
-          appearance={ButtonTypeEnum.OUTLINE}
-        >
-          Оставить заявку
-        </Button>
 
         <AnimatePresence>
           {isSuccess && (
