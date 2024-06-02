@@ -16,4 +16,5 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   appearance?: ButtonTypeEnum;
   size?: ButtonSizeEnum;
+  disabled?: boolean;
 }

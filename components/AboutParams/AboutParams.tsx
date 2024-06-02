@@ -14,18 +14,18 @@ const bebas = Bebas_Neue({
 const aboutParams = [
   {
     id: 0,
-    value: '3 700 M²',
-    description: 'Площадь производства',
+    value: '3 200 M²',
+    description: 'площадь производственных и складских помещений',
   },
   {
     id: 1,
-    value: '>85',
-    description: 'Домов производим в год',
+    value: '>96',
+    description: 'домов в год проектная мощность',
   },
   {
     id: 2,
-    value: '130',
-    description: 'Сотрудников в штате',
+    value: '>45',
+    description: 'сотрудников в штате',
   },
 ];
 

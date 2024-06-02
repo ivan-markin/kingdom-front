@@ -45,6 +45,8 @@ const nextConfig = {
     KINGDOM_PUBLIC_URL: process.env.KINGDOM_PUBLIC_URL,
     KINGDOM_API_URL: process.env.KINGDOM_API_URL,
     KINGDOM_API_KEY: process.env.KINGDOM_API_KEY,
+    TG_TOKEN: process.env.TG_TOKEN,
+    CHAT_ID: process.env.CHAT_ID
   },
 };
 

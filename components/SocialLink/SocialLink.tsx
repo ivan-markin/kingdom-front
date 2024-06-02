@@ -15,13 +15,13 @@ export default function SocialLink({type}: SocialLinkProps) {
         setLink('wa');
         break;
       case 'telegram':
-        setLink('tg');
+        setLink('https://t.me/kingdom77777');
         break;
     }
   }, [type]);
 
   return (
-    <a href={link} className={style.socialLink}>
+    <a href={link} className={style.socialLink} target={'_blank'}>
       {type === 'whatsapp' && <WhatsappIcon />}
       {type === 'telegram' && <TelegramIcon />}
     </a>

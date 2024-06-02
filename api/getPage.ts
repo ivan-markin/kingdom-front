@@ -7,11 +7,11 @@ export async function getPage(
 ): Promise<{data: iHousePage} | null> {
   const getAlias = (alias: string) => {
     switch (alias) {
-      case 'king26':
+      case 'model_b':
         return 1;
-      case 'king48':
+      case 'model_c':
         return 2;
-      case 'king65':
+      case 'model_d':
         return 3;
     }
   };

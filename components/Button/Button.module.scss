@@ -24,6 +24,12 @@
       background: white;
       color: black;
     }
+
+    &:disabled {
+      opacity: .2;
+      user-select: none;
+      pointer-events: none;
+    }
   }
 
   &_light {

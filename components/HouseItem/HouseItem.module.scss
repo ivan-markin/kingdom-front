@@ -6,6 +6,9 @@
   // transition: opacity 0.5s;
 
   &__title {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
     border-bottom: 2px solid var(--primary-color);
     padding-bottom: 12px;
     margin-bottom: 14px;
@@ -14,6 +17,14 @@
       padding-bottom: 6px;
       margin-bottom: 10px;
     }
+  }
+
+  &__areaCaption {
+    color: var(--primary-second-color);
+  }
+
+  &__titleCaption {
+    color: var(--primary-second-color);
   }
 
   &__price {

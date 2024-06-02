@@ -74,7 +74,9 @@ export default function HouseItem({item}: HouseItemProps) {
           {item.attributes.title}
         </h3>
         <div className={cn('regular-text', style.house__description)}>
-          <span className={style.house__area}>{item.attributes.area} кв.м</span>
+          <span className={style.house__area}>
+            жилая площадь: {item.attributes.area} кв.м
+          </span>
           <span className={style.house__price}>{item.attributes.price} ₽</span>
         </div>
       </div>

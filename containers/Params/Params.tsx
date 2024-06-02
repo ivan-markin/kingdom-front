@@ -10,7 +10,9 @@ export default async function Params({}: ParamsProps) {
   return (
     <section className={style.params}>
       {data &&
-        data.map((item: iHouseParam) => (
+        data
+          .sort((a: iHouseParam, b: iHouseParam) => a.id - b.id)
+          .map((item: iHouseParam) => (
           <ParamItem key={item.id} item={item} />
         ))}
     </section>

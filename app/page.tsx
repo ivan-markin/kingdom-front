@@ -24,7 +24,7 @@ export default function Home() {
       <Houses id='houses' />
       <ParamsDisclaimer />
       <Params />
-      <Included />
+      {/*<Included />*/}
       <Image
         className={style.image1}
         src={'/form-image-mobile-1.jpg'}
@@ -37,7 +37,7 @@ export default function Home() {
       <About id='about' />
       <AboutParams />
       <Stages id='stages' />
-      <Reviews />
+      {/*<Reviews />*/}
       <ExhibitionArea />
       <Image
         className={style.image1}

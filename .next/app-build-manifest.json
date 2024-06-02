@@ -1,22 +1,45 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
+    "/not-found": [
+      "static/chunks/webpack-5b6496edafe516c2.js",
+      "static/chunks/fd9d1056-803f3afc98c64581.js",
+      "static/chunks/69-bf0faca87d920f27.js",
+      "static/chunks/main-app-b4a87f4108a8a1d3.js",
+      "static/chunks/647-14237c5632f4e783.js",
+      "static/css/362fe94f82240f19.css",
+      "static/chunks/app/not-found-6227a8bb18a5d802.js"
     ],
     "/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
+      "static/chunks/webpack-5b6496edafe516c2.js",
+      "static/chunks/fd9d1056-803f3afc98c64581.js",
+      "static/chunks/69-bf0faca87d920f27.js",
+      "static/chunks/main-app-b4a87f4108a8a1d3.js",
+      "static/css/4f7ff56d51fa690d.css",
+      "static/chunks/app/layout-bceb9e4d06565ff8.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-5b6496edafe516c2.js",
+      "static/chunks/fd9d1056-803f3afc98c64581.js",
+      "static/chunks/69-bf0faca87d920f27.js",
+      "static/chunks/main-app-b4a87f4108a8a1d3.js",
+      "static/chunks/647-14237c5632f4e783.js",
+      "static/chunks/462-f55d007e7b8efbd4.js",
+      "static/css/85aaa966acc8ff97.css",
+      "static/chunks/546-8891eb8288ab1009.js",
+      "static/css/b5ebcad303b05635.css",
+      "static/chunks/app/page-11a691be9d8cad84.js"
     ],
     "/houses/[alias]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/houses/[alias]/page.css",
-      "static/chunks/app/houses/[alias]/page.js"
+      "static/chunks/webpack-5b6496edafe516c2.js",
+      "static/chunks/fd9d1056-803f3afc98c64581.js",
+      "static/chunks/69-bf0faca87d920f27.js",
+      "static/chunks/main-app-b4a87f4108a8a1d3.js",
+      "static/chunks/647-14237c5632f4e783.js",
+      "static/chunks/462-f55d007e7b8efbd4.js",
+      "static/css/85aaa966acc8ff97.css",
+      "static/chunks/546-8891eb8288ab1009.js",
+      "static/css/e59da3a58f20b8ba.css",
+      "static/chunks/app/houses/[alias]/page-bd42bf5f9090acd2.js"
     ]
   }
 }

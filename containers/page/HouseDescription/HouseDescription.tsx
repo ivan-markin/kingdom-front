@@ -2,6 +2,7 @@ import Button from '@/components/Button/Button';
 import style from './HouseDescription.module.scss';
 import {HouseDescriptionProps} from './HouseDescription.props';
 import {ButtonSizeEnum, ButtonTypeEnum} from '@/components/Button/Button.props';
+import Link from 'next/link';
 
 export default function HouseDescription({data}: HouseDescriptionProps) {
   return (
@@ -17,19 +18,17 @@ export default function HouseDescription({data}: HouseDescriptionProps) {
             </div>
           ))}
         </div>
-        <Button
-          appearance={ButtonTypeEnum.DARK_OUTLINE}
-          size={ButtonSizeEnum.MEDIUM}
-        >
-          Смотреть комплектацию
-        </Button>
+        <Link href={'#complectation'}>
+          <Button
+            appearance={ButtonTypeEnum.DARK_OUTLINE}
+            size={ButtonSizeEnum.MEDIUM}
+          >
+            Смотреть комплектацию
+          </Button>
+        </Link>
       </div>
       <div className={style.houseDescription__text}>
-        <span>
-          Минималистичный дом с плоской кровлей, который со временем может расти
-          с помощью добавления дополнительных модулей вбок и даже вверх, до
-          двухэтажной версии.
-        </span>
+        <span>{data.attributes.description}</span>
       </div>
     </section>
   );

@@ -7,6 +7,7 @@ export default function Button({
   appearance,
   size = ButtonSizeEnum.LARGE,
   className,
+  disabled,
 }: ButtonProps) {
   return (
     <button
@@ -21,6 +22,7 @@ export default function Button({
         },
         className,
       )}
+      disabled={disabled}
     >
       {children}
     </button>

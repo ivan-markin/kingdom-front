@@ -4,6 +4,7 @@ import {ExhibitionAreaProps} from './ExhibitionArea.props';
 import {getExhibitionContent} from '@/api/getExhibitionContent';
 import Button from '@/components/Button/Button';
 import {ButtonTypeEnum} from '@/components/Button/Button.props';
+import Link from 'next/link';
 
 const marqueeText = 'Посетите нашу выставочную площадку';
 const marqueeImage = '/crown-icon.svg';
@@ -79,12 +80,14 @@ export default async function ExhibitionArea({}: ExhibitionAreaProps) {
             <span className={style.exhibitionArea__workingHours}>
               {data.attributes.description}
             </span>
-            <Button
-              className={style.exhibitionArea__cta}
-              appearance={ButtonTypeEnum.LIGHT}
-            >
-              Записаться
-            </Button>
+            <Link href={'/#form'}>
+              <Button
+                className={style.exhibitionArea__cta}
+                appearance={ButtonTypeEnum.LIGHT}
+              >
+                Записаться
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

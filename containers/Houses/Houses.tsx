@@ -11,7 +11,10 @@ export default async function Houses({ id }: HousesProps) {
   return (
     <div className={cn(style.houses, "houses-list")} id={id}>
       {data &&
-        data.map((item: iHouse) => <HouseItem key={item.id} item={item} />)}
+        data
+          .sort((a: iHouse, b: iHouse) => a.id - b.id)
+          .map((item: iHouse) => <HouseItem key={item.id} item={item} />)
+      }
     </div>
   );
 }

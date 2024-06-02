@@ -55,13 +55,15 @@ export default function KeyFeaturesList({data}: KeyFeaturesListProps) {
       </motion.span>
 
       {data &&
-        data.map((item: iKeyFeature, i: number) => (
-          <KeyFeaturesItem
-            key={item.id}
-            item={item}
-            index={i}
-            onMouseOver={() => onHover(i + 1)}
-          />
+        data
+          .sort((a: iKeyFeature, b) => a.id - b.id)
+          .map((item: iKeyFeature, i: number) => (
+            <KeyFeaturesItem
+              key={item.id}
+              item={item}
+              index={i}
+              onMouseOver={() => onHover(i + 1)}
+            />
         ))}
     </div>
   );

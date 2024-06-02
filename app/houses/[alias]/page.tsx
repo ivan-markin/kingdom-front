@@ -49,13 +49,13 @@ export default async function HousePage({params}: {params: {alias: string}}) {
       <span id='complectation'>
         <Complectation data={house} />
       </span>
-      <Reviews />
+      {/*<Reviews />*/}
       <ExhibitionArea />
       <Form id='form' />
       <Faq />
       <Footer />
 
-      {/* <ActionPanel /> */}
+      {/*<ActionPanel />*/}
     </div>
   );
 }

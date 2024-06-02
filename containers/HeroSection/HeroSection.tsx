@@ -73,19 +73,19 @@ export default function HeroSection({}: HeroSectionProps) {
                 style.heroSection__phone,
                 style.heroSection__actionItem,
               )}
-              href='tel:89101234567'
+              href='tel:84959028888'
             >
-              +7 910 123-45-67
+              +7 (495) 902-88-88
             </a>
             <div className={style.heroSection__socials}>
-              <span
-                className={cn(
-                  style.heroSection__actionItem,
-                  style.heroSection__actionItem_square,
-                )}
-              >
-                <SocialLink type={'whatsapp'} />
-              </span>
+              {/*<span*/}
+              {/*  className={cn(*/}
+              {/*    style.heroSection__actionItem,*/}
+              {/*    style.heroSection__actionItem_square,*/}
+              {/*  )}*/}
+              {/*>*/}
+              {/*  <SocialLink type={'whatsapp'} />*/}
+              {/*</span>*/}
               <span
                 className={cn(
                   style.heroSection__actionItem,
@@ -133,7 +133,7 @@ export default function HeroSection({}: HeroSectionProps) {
               })}
             >
               модульные дома из лучших материалов для вашего комфорта с
-              доставкой и установкой от 1 дня
+              доставкой и монтажом от 3 дней
             </span>
             <div className={style.heroSection__bottomRight}>
               <Link href={'#form'} className={style.heroSection__ctaLink}>
