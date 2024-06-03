@@ -60,27 +60,37 @@ export default async function ExhibitionArea({}: ExhibitionAreaProps) {
           />
         </div>
         <div className={style.exhibitionArea__content}>
-          <div className={style.exhibitionArea__addressBlock}>
-            <span>Москва</span>
-            <span>{data && data.attributes.address}</span>
-            <div className={style.exhibitionArea__metro}>
-              <span>{data && data.attributes.metro}</span>
-              <span className={style.exhibitionArea__walkingTime}>
-                <Image
-                  src={'/walking-icon.svg'}
-                  width={16}
-                  height={16}
-                  alt=''
-                />
-                {data && data.attributes.timeAmount} мин
+          <div className={style.exhibitionArea__addressCnt}>
+            <div className={style.exhibitionArea__addressBlock}>
+              <span>Москва</span>
+              <span>{data && data.attributes.address}</span>
+              <div className={style.exhibitionArea__metro}>
+                <span>{data && data.attributes.metro}</span>
+                <span className={style.exhibitionArea__walkingTime}>
+                  <Image
+                    src={'/walking-icon.svg'}
+                    width={16}
+                    height={16}
+                    alt=''
+                  />
+                  {data && data.attributes.timeAmount} мин
+                </span>
+              </div>
+            </div>
+            <div className={style.exhibitionArea__addressBlock}>
+              <span>
+                МО, г. Апрелевка,
+                <br />
+                ул. Парковая, дом 1
               </span>
             </div>
           </div>
+
           <div className={style.exhibitionArea__ctaBlock}>
             <span className={style.exhibitionArea__workingHours}>
               {data.attributes.description}
             </span>
-            <Link href={'/#form'}>
+            <Link href={'/#form'} className={style.exhibitionArea__ctaLink}>
               <Button
                 className={style.exhibitionArea__cta}
                 appearance={ButtonTypeEnum.LIGHT}

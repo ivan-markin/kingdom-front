@@ -98,6 +98,11 @@
       margin-top: 30px;
     }
 
+    @media (max-width: 768px) {
+      justify-content: space-between;
+      gap: 10px;
+    }
+
     &_shown {
       opacity: 1;
     }
@@ -142,7 +147,8 @@
 
   &__phone {
     @media (max-width: 768px) {
-      display: none;
+      font-size: 14px;
+      padding: 0 10px;
     }
   }
 

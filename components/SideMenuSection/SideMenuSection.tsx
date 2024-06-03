@@ -1,5 +1,3 @@
-'use client';
-
 import {AnimatePresence, motion} from 'framer-motion';
 import style from './SideMenuSection.module.scss';
 import {SideMenuSectionProps} from './SideMenuSection.props';
@@ -46,15 +44,15 @@ export default function SideMenuSection({
 
         <div className={style.sideMenu__menuContacts}>
           <div className={style.sideMenu__menuSocials}>
-            <span
-              className={cn(
-                style.sideMenu__actionItem,
-                style.sideMenu__actionItem_square,
-                style.sideMenu__actionItem_gray,
-              )}
-            >
-              <SocialLink type={'whatsapp'} />
-            </span>
+            {/*<span*/}
+            {/*  className={cn(*/}
+            {/*    style.sideMenu__actionItem,*/}
+            {/*    style.sideMenu__actionItem_square,*/}
+            {/*    style.sideMenu__actionItem_gray,*/}
+            {/*  )}*/}
+            {/*>*/}
+            {/*  <SocialLink type={'whatsapp'} />*/}
+            {/*</span>*/}
             <span
               className={cn(
                 style.sideMenu__actionItem,
@@ -71,9 +69,9 @@ export default function SideMenuSection({
               style.sideMenu__actionItem_gray,
               style.sideMenu__menuPhone,
             )}
-            href='tel:89101234567'
+            href='tel:84959028888'
           >
-            +7 910 123-45-67
+            +7 (495) 902-88-88
           </a>
         </div>
       </motion.div>

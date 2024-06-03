@@ -11,6 +11,7 @@ import {ButtonTypeEnum} from '../Button/Button.props';
 import {SubmitErrorHandler, SubmitHandler, useForm} from 'react-hook-form';
 import PaperPlaneImage from './paper-plane.svg';
 import {AnimatePresence, motion} from 'framer-motion';
+import Link from 'next/link';
 
 const geologica = Geologica({subsets: ['cyrillic']});
 
@@ -186,7 +187,10 @@ export default function Form({id}: FormProps) {
             onChange={() => setCheckboxActive(!isCheckboxActive)}
           />
           <span>
-            Соглашаюсь с <a href=''>условиями обработки персональных данных</a>
+            Соглашаюсь с{' '}
+            <Link href={'/privacy-policy'}>
+              условиями обработки персональных данных
+            </Link>
           </span>
         </div>
 

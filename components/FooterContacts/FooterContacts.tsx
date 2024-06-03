@@ -10,12 +10,16 @@ export default async function FooterContacts({}: FooterContactsProps) {
   return (
     <>
       <span className={cn('regular-text', style.footerAddress)}>
-        <span>Москва,</span>
+        <span className={style.footerAddress__title}>
+          Офис и&nbsp;выставочная площадка в&nbsp;Москве:
+        </span>
         <span>{data && data.attributes.address}</span>
         <span>{data && data.attributes.phone}</span>
       </span>
       <span className={cn('regular-text', style.footerAddress)}>
-        <span className={style.footerAddress__title}>Производство:</span>
+        <span className={style.footerAddress__title}>
+          Производство, офис и&nbsp;выставочная площадка:
+        </span>
         <span>{data && data.attributes.productionAddress}</span>
       </span>
       <div className={style.footerSocialLinks}>
