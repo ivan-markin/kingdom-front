@@ -35,7 +35,9 @@ export default function PageHero({data}: PageHeroProps) {
             [style.hero__header_shown]: isShown,
           })}
         >
-          <Logo type={LogoTypeEnum.INNER} className={style.hero__logo} />
+          <Link href={'/'}>
+            <Logo type={LogoTypeEnum.INNER} className={style.hero__logo} />
+          </Link>
           <div className={style.hero__menu}>
             <Link
               className={cn(style.hero__menuItem, style.hero__menuItem_toMain)}
