@@ -12,6 +12,8 @@ import {SubmitErrorHandler, SubmitHandler, useForm} from 'react-hook-form';
 import PaperPlaneImage from './paper-plane.svg';
 import {AnimatePresence, motion} from 'framer-motion';
 import Link from 'next/link';
+import {ym} from '@/services/yandex-metrica/ym';
+import {formSubmitSuccess} from '@/services/yandex-metrica/form-submit-success';
 
 const geologica = Geologica({subsets: ['cyrillic']});
 
@@ -54,6 +56,8 @@ export default function Form({id}: FormProps) {
       if (res.ok) {
         console.log('Форма отправлена');
         setIsSuccess(true);
+        // YM
+        formSubmitSuccess();
       }
     } catch (e) {
       console.log(e);
