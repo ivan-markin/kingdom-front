@@ -17,10 +17,6 @@ export default async function FooterContacts({}: FooterContactsProps) {
         </span>
         <span>{data && data.attributes.address}</span>
         <span>{data && data.attributes.phone}</span>
-        <a className={style.link} href={ExternalLinksEnum.Scheme} target={'_blank'}>
-          <Image src={'/pin-icon.svg'} width={20} height={20} alt={''} />
-          Схема проезда
-        </a>
       </span>
       <span className={cn('regular-text', style.footerAddress)}>
         <span className={style.footerAddress__title}>
