@@ -39,6 +39,11 @@ const nextConfig = {
         port: "",
         pathname: "/uploads/**",
       },
+      {
+        protocol: "https",
+        hostname: "mc.yandex.ru",
+        port: "",
+      },
     ],
   },
   env: {

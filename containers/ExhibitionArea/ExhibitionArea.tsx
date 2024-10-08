@@ -5,6 +5,7 @@ import {getExhibitionContent} from '@/api/getExhibitionContent';
 import Button from '@/components/Button/Button';
 import {ButtonTypeEnum} from '@/components/Button/Button.props';
 import Link from 'next/link';
+import {ExternalLinksEnum} from '@/constants/externalLinksEnum';
 
 const marqueeText = 'Посетите нашу выставочную площадку';
 const marqueeImage = '/crown-icon.svg';
@@ -83,6 +84,10 @@ export default async function ExhibitionArea({}: ExhibitionAreaProps) {
                 <br />
                 ул. Парковая, дом 1
               </span>
+              <a className={style.exhibitionArea__chemeLink} href={ExternalLinksEnum.Scheme} target={'_blank'}>
+                <Image src={'/pin-icon_light.svg'} width={20} height={20} alt={''} />
+                Схема проезда
+              </a>
             </div>
           </div>
 

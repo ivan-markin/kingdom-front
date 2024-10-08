@@ -162,4 +162,17 @@
   &__ctaLink {
     width: 100%;
   }
+
+  &__chemeLink {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    color: #a1b3d0;
+    transition: .2s color;
+
+    &:hover {
+      color: white;
+    }
+  }
 }

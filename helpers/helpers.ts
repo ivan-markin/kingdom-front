@@ -20,3 +20,11 @@ export function sort(a: any, b: any, sortType: SortTypeEnum) {
 
   return 0;
 }
+
+export function isClient(): boolean {
+  return typeof window !== 'undefined';
+}
+
+export async function sleep(ms: number) {
+  await new Promise((r) => setTimeout(r, ms));
+}

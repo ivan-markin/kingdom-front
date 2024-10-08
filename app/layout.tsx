@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geologica } from "next/font/google";
 import "./globals.scss";
 import GoogleAnalytics from '@/components/GoogleAnalytics/GoogleAnalytics';
+import {YandexMetrika} from '@/components/YandexMetrika';
 
 const geologica = Geologica({ subsets: ["cyrillic"] });
 
@@ -18,9 +19,12 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={geologica.className}>
+        <GoogleAnalytics />
+        <YandexMetrika />
+
         {children}
+
       </body>
-      <GoogleAnalytics />
     </html>
   );
 }
