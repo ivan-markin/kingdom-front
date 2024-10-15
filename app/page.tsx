@@ -46,7 +46,7 @@ export default function Home() {
         height={270}
         alt=''
       />
-      <Form />
+      <Form collapsed />
       <Faq id='faq' />
       <Footer />
     </main>

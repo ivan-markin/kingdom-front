@@ -30,11 +30,10 @@ const formAnimate = {
   },
   animate: {
     opacity: 1,
-  }
-}
+  },
+};
 
-export default function Form({id}: FormProps) {
-  const [expanded, setExpanded] = useState<boolean>(false);
+export default function Form({id, collapsed}: FormProps) {
   const [isCheckboxActive, setCheckboxActive] = useState<boolean>(true);
   const [isCaptchaChecked, setCaptchaChecked] = useState<string | null>(null);
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
@@ -92,40 +91,38 @@ export default function Form({id}: FormProps) {
 
   return (
     <div className={style.form} id={id}>
-      <div className={cn(style.form__cnt, {
-        [style.form__cnt_collapsed]: !expanded
-      })}>
-
-        {expanded &&
-          <button className={style.form__closeBtn} onClick={() => setExpanded(false)}>
-            <Image src={'/close-icon.svg'} width={30} height={30} alt={''} />
-          </button>
-        }
-
+      <div
+        className={cn(style.form__cnt, {
+          [style.form__cnt_collapsed]: collapsed,
+        })}
+      >
         <div className={style.form__header}>
-          <h2 className={cn('block-title', style.form__title, {
-            [style.form__title_collapsed]: !expanded
-          })}>
+          <h2
+            className={cn('block-title', style.form__title, {
+              [style.form__title_collapsed]: collapsed,
+            })}
+          >
             <Image src={'/form-image.png'} width={158} height={173} alt={''} />
             Понравился дом
             <br />
             или появились вопросы?
           </h2>
 
-          {expanded &&
+          {!collapsed && (
             <span className={cn('regular-text', style.form__description)}>
               Оставьте ваш номер телефона, и наш менеджер свяжется с вами в
-              ближайшее время. Также мы вышлем презентацию проектов на ваш e-mail.
+              ближайшее время. Также мы вышлем презентацию проектов на ваш
+              e-mail.
             </span>
-          }
+          )}
         </div>
 
         <AnimatePresence>
-          {expanded ? (
+          {!collapsed ? (
             <motion.form
               className={cn(style.form__content, {
                 [style.form__content_error]:
-                errors.name || errors.phone || errors.email,
+                  errors.name || errors.phone || errors.email,
               })}
               onSubmit={handleSubmit(submit, error)}
               variants={formAnimate}
@@ -138,40 +135,40 @@ export default function Form({id}: FormProps) {
               <div
                 className={cn(style.form__inputs, {
                   [style.form__inputs_error]:
-                  errors.name || errors.phone || errors.email,
+                    errors.name || errors.phone || errors.email,
                 })}
               >
-            <span className={style.form__inputCnt}>
-              <input
-                className={cn(geologica.className, style.form__input, {
-                  [style.form__input_error]: errors.name,
-                })}
-                type="text"
-                placeholder="* Ваше имя"
-                aria-invalid={!!errors.name}
-                {...register('name', {required: true})}
-              />
-              {errors.name && (
-                <span className={style.form__errorMessage}>
-                  Пожалуйста, укажите ваше имя
-                </span>
-              )}
-            </span>
                 <span className={style.form__inputCnt}>
-              <input
-                className={cn(geologica.className, style.form__input, {
-                  [style.form__input_error]: errors.phone,
-                })}
-                type="tel"
-                placeholder="* Телефон"
-                aria-invalid={!!errors.phone}
-                {...register('phone', {
-                  required: true,
-                  pattern: /\+?[\d\s\-\(\)]+[^\s\s][^\-\s]$/,
-                  minLength: 11,
-                  maxLength: 18,
-                })}
-              />
+                  <input
+                    className={cn(geologica.className, style.form__input, {
+                      [style.form__input_error]: errors.name,
+                    })}
+                    type='text'
+                    placeholder='* Ваше имя'
+                    aria-invalid={!!errors.name}
+                    {...register('name', {required: true})}
+                  />
+                  {errors.name && (
+                    <span className={style.form__errorMessage}>
+                      Пожалуйста, укажите ваше имя
+                    </span>
+                  )}
+                </span>
+                <span className={style.form__inputCnt}>
+                  <input
+                    className={cn(geologica.className, style.form__input, {
+                      [style.form__input_error]: errors.phone,
+                    })}
+                    type='tel'
+                    placeholder='* Телефон'
+                    aria-invalid={!!errors.phone}
+                    {...register('phone', {
+                      required: true,
+                      pattern: /\+?[\d\s\-\(\)]+[^\s\s][^\-\s]$/,
+                      minLength: 11,
+                      maxLength: 18,
+                    })}
+                  />
                   {errors.phone && (
                     <div className={style.form__errorMessage}>
                       {errors.phone.type === 'required' && (
@@ -190,19 +187,19 @@ export default function Form({id}: FormProps) {
                   )}
                   {!errors.phone && (
                     <span className={style.form__inputSubline}>
-                  Телефон в формате: +7 (123) 456-78-90
-                </span>
+                      Телефон в формате: +7 (123) 456-78-90
+                    </span>
                   )}
-            </span>
-                <span className={style.form__inputCnt}>
-              <input
-                className={cn(geologica.className, style.form__input, {
-                  [style.form__input_error]: errors.email,
-                })}
-                type="email"
-                placeholder="E-mail"
-                {...register('email', {pattern: /[\w\-\.]+@\w+\.\w+/})}
-              />
+                </span>
+                {/* <span className={style.form__inputCnt}>
+                  <input
+                    className={cn(geologica.className, style.form__input, {
+                      [style.form__input_error]: errors.email,
+                    })}
+                    type='email'
+                    placeholder='E-mail'
+                    {...register('email', {pattern: /[\w\-\.]+@\w+\.\w+/})}
+                  />
                   {errors.email && (
                     <div className={style.form__errorMessage}>
                       {errors.email.type === 'pattern' && (
@@ -210,10 +207,13 @@ export default function Form({id}: FormProps) {
                       )}
                     </div>
                   )}
-            </span>
+                </span> */}
               </div>
 
-              <ReCAPTCHA sitekey={'6LdMI1sqAAAAAENW9JbIfKS3PrHoxyz-otEzqO0Y'} onChange={setCaptchaChecked} />
+              <ReCAPTCHA
+                sitekey={'6LdMI1sqAAAAAENW9JbIfKS3PrHoxyz-otEzqO0Y'}
+                onChange={setCaptchaChecked}
+              />
 
               <div className={style.form__checkbox}>
                 <Checkbox
@@ -221,11 +221,11 @@ export default function Form({id}: FormProps) {
                   onChange={() => setCheckboxActive(!isCheckboxActive)}
                 />
                 <span>
-              Соглашаюсь с{' '}
+                  Соглашаюсь с{' '}
                   <Link href={'/privacy-policy'}>
-                условиями обработки персональных данных
-              </Link>
-            </span>
+                    условиями обработки персональных данных
+                  </Link>
+                </span>
               </div>
 
               <Button
@@ -235,15 +235,16 @@ export default function Form({id}: FormProps) {
               >
                 Оставить заявку
               </Button>
-            </motion.form>) : (
-
-            <Button
-              className={style.form__button}
-              appearance={ButtonTypeEnum.OUTLINE}
-              onClick={() => setExpanded(true)}
-            >
-              Оставить заявку
-            </Button>
+            </motion.form>
+          ) : (
+            <a href={'#form'}>
+              <Button
+                className={style.form__button}
+                appearance={ButtonTypeEnum.OUTLINE}
+              >
+                Оставить заявку
+              </Button>
+            </a>
           )}
         </AnimatePresence>
 
