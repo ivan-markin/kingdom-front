@@ -232,6 +232,7 @@ export default function Form({id, collapsed}: FormProps) {
                 className={style.form__button}
                 appearance={ButtonTypeEnum.OUTLINE}
                 disabled={!isCheckboxActive || !isCaptchaChecked}
+                type='submit'
               >
                 Оставить заявку
               </Button>
