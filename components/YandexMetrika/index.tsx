@@ -1,13 +1,11 @@
 'use client';
 
 import Script from 'next/script';
-import {Suspense, useEffect, useRef} from 'react';
-import {hit} from '@/services/yandex-metrica/hit';
+import {useEffect} from 'react';
 import {usePathname, useSearchParams} from 'next/navigation';
-import {isClient, sleep} from '@/helpers/helpers';
-import {useMounted} from '@/hooks/use-mounted';
 import Image from 'next/image';
 import {ym} from '@/services/yandex-metrica/ym';
+import {YM_COUNTER} from '@/constants/ymCounter';
 
 export function YandexMetrika() {
   const pathName = usePathname();
@@ -31,7 +29,7 @@ export function YandexMetrika() {
                     k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
                     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
                 
-                    ym(98662924, "init", {
+                    ym(${YM_COUNTER}, "init", {
                         defer: true,
                         clickmap: true,
                         trackLinks: true,
@@ -45,41 +43,10 @@ export function YandexMetrika() {
           height='1'
           width='1'
           style={{display: 'none'}}
-          src={`https://mc.yandex.ru/watch/98662924`}
+          src={`https://mc.yandex.ru/watch/${YM_COUNTER}`}
           alt=''
         />
       </noscript>
-
-      {/* <Suspense>
-        <Hit />
-      </Suspense> */}
     </>
   );
 }
-
-// function Hit() {
-//   const pathName = usePathname();
-//   const searchParams = useSearchParams();
-//   const mounted = useMounted();
-//   const isFirstTimeHandleRef = useRef(false);
-
-//   useEffect(() => {
-//     if (!isClient() || !mounted) {
-//       return;
-//     }
-
-//     const handler = async () => {
-//       if (!isFirstTimeHandleRef.current) {
-//         // wait for yandex metrika loaded
-//         await sleep(2000);
-//         isFirstTimeHandleRef.current = true;
-//       }
-
-//       hit(window.location.href);
-//     };
-
-//     handler();
-//   }, [pathName, searchParams, mounted]);
-
-//   return null;
-// }
