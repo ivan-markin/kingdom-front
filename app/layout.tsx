@@ -22,9 +22,7 @@ export default function RootLayout({
       <body className={geologica.className}>
         <GoogleAnalytics />
         {children}
-        <Suspense>
-          <YandexMetrika />
-        </Suspense>
+        <YandexMetrika />
       </body>
     </html>
   );
